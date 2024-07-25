@@ -1,8 +1,9 @@
 import Navbar from "@/components/shared/Navbar";
 import { Button } from "@/components/ui/button";
+import { HeroParallax } from "@/components/ui/connect-parralax";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { clients } from "@/lib/constant";
+import { clients, products } from "@/lib/constant";
 
 
 export default function Home() {
@@ -32,6 +33,9 @@ export default function Home() {
         direction="right"
         speed="slow"
       />
+      <section>
+        <HeroParallax products={products}></HeroParallax>
+      </section>
     </main>
   );
 }
