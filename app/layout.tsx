@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from 'next/font/google'
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme-providers"
+import { ThemeProvider } from "@/app/providers/theme-providers"
 
 
 const font = DM_Sans({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}
+      <body className={`${font.className} dark `}
       >
         <ThemeProvider
           attribute="class"
